@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Cappi Paste",
+  "description": "Multi-Dimensional Clipboard.",
+    "icons": {
+    "128": "icon.png"
+  },
+  "version": "1.1",
+  "permissions": [
+    "sidePanel", 
+    "storage", 
+    "scripting", 
+    "activeTab",
+    "clipboardWrite" 
+  ],
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "commands": {
+"batch-copy": {
+    "suggested_key": { "default": "Alt+Shift+V" },
+    "description": "Copy All to Clipboard (Ready to Paste)" 
+  },
+    "batch-copy": {
+      "suggested_key": {
+        "default": "Alt+Shift+V",
+        "mac": "Alt+Shift+V"
+      },
+      "description": "Mega Paste"
+    }
+  },
+  "action": { "default_title": "Open Shelf" }
+}

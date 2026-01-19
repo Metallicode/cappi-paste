@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 10px; }
+    
+    h3 { margin: 0 0 10px 0; font-size: 14px; color: #555; display: flex; justify-content: space-between; }
+    
+    .actions { display: flex; gap: 5px; }
+    .btn { cursor: pointer; border: none; padding: 5px 10px; border-radius: 4px; font-size: 11px; color: white;}
+    .btn-clear { background: #ff4757; }
+    .btn-copy-all { background: #2ed573; }
+
+    #list { display: flex; flex-direction: column; gap: 8px; }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
+      border-left: 3px solid transparent;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .card:hover { border-left-color: #3742fa; transform: translateX(2px); }
+    .card:active { background: #eef; }
+
+    .card-text { font-size: 13px; color: #333; max-height: 80px; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap; }
+    .card-meta { font-size: 10px; color: #aaa; margin-top: 5px; display: flex; justify-content: space-between; }
+    
+    .delete-btn { color: #ccc; cursor: pointer; }
+    .delete-btn:hover { color: red; }
+
+    /* Animation for "Copied" feedback */
+    .flash { background: #dff9fb !important; }
+  </style>
+</head>
+<body>
+
+<h3>
+  Shelf History
+  <div class="actions">
+    <button id="copyAllBtn" class="btn btn-copy-all">Move All to Clipboard</button>
+    <button id="clearBtn" class="btn btn-clear">Clear</button>
+  </div>
+</h3>
+
+  <div id="list">
+    </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
